@@ -62,18 +62,18 @@ The application uses _**Gradio**_.
 - The TDEE value is saved to the _tdee_state_, making it immediately available for comparison in the Food Tracker tab.
 
 #### Tab 3: 🍏 Food Calorie Tracker
-  In this tab, clicking the add_food_button will call the add_food_entry() function. It uses data from either the dropdown menu or the manual input fields. The code then proceeds as follows:
+  In this tab, clicking the _add_food_button_ will call the _add_food_entry()_ function. It uses data from either the dropdown menu or the manual input fields. The code then proceeds as follows:
 
-- Data Source Selection : The function first checks whether the user selected a common food from the Dropdown or manually entered a value into the Manual Food and Entry Calories  fields.
-- Item logging : The food and calorie data are then saved into the food_log_state table, which serves as a history of the day's meals.
-- Instant Screen Update : As soon as an item is successfully added, the update_tracker_summary() function is called to:
-    - Calculate today's total calories from the food_log_state data.
+- Data Source Selection : The function first checks whether the user selected a common food from the **Dropdown** or manually entered a value into the **Manual Food** and **Entry Calories**  fields.
+- Item logging : The food and calorie data are then saved into the _food_log_state table_, which serves as a history of the day's meals.
+- Instant Screen Update : As soon as an item is successfully added, the _update_tracker_summary()_ function is called to:
+    - Calculate today's total calories from the _food_log_state_ data.
     - Compare the total to the TDEE goal from Tab 2, showing the user how many calories they have left or if they've gone over.
     - Generate a graph : A bar chart is created to display the total calories consumed over the last 7 days, complete with a dotted line representing the TDEE goal. This gives the user a clear overview of their eating habits and trends.
 
 
   After successfully adding a food item, the function automatically clears the input fields. This allows the user to quickly and conveniently enter the next item.
 
-Additional Advice : Because this code saves and updates data on a daily basis, if you want to add new items to the food log for the current day, you can press Add Food Item multiple times. Each time you do, the new food will be added, and the day's calorie total will be automatically recalculated.
+_Additional Advice_ : Because this code saves and updates data on a daily basis, if you want to add new items to the food log for the current day, you can press **Add Food Item** multiple times. Each time you do, the new food will be added, and the day's calorie total will be automatically recalculated.
 
 
